@@ -1,0 +1,28 @@
+<Page
+    class="page"
+    navigatingTo="onNavigatingTo"  
+    xmlns="http://schemas.nativescript.org/tns.xsd">
+
+    <ActionBar class="action-bar">
+        <NavigationButton tap="onBackButtonTap" android.systemIcon="ic_menu_back"/>
+        <Label class="action-bar-title" text="{{ description }}"></Label>
+    </ActionBar>
+
+    <ListView items="{{ log }}">
+        <ListView.itemTemplate>
+            <StackLayout class="p-10" orientation="vertical">
+                <StackLayout orientation="horizontal">
+                <Label text="{{ bodypart }}" class="h2" textWrap="true"></Label>
+                </StackLayout>
+                <StackLayout orientation="horizontal">
+                <Label text=" Exercise 1: " class="detail" textWrap="true"></Label>
+                <Label text="{{ exercise1 }}" class="detail" textWrap="true"></Label>
+                </StackLayout>
+                <StackLayout orientation="horizontal">
+                <Label text=" Exercise 2: " class="detail" textWrap="true"></Label>
+                <Label text="{{ exercise2 }}" class="detail" textWrap="true"></Label>
+                </StackLayout>
+            </StackLayout>
+        </ListView.itemTemplate>
+    </ListView>
+</Page>
