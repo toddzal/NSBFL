@@ -1,0 +1,19 @@
+.header{
+
+    font-size: 24;
+    color: black;
+}
+
+FlexboxLayout {
+    justify-content: space-between;
+}
+.workout-item {
+    margin: 2;
+    vertical-align: center;
+    font-size: 24;
+    width: 47%;
+    
+}
+.container{
+    width: 50%;
+}

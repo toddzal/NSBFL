@@ -1,0 +1,29 @@
+<Page
+    class="page"
+    navigatingTo="onNavigatingTo"  
+    xmlns="http://schemas.nativescript.org/tns.xsd">
+
+    <ActionBar class="action-bar">
+        <Label class="action-bar-title" text="Home"></Label>
+    </ActionBar>
+
+    <ListView items="{{ items }}" itemTap="onItemTap">
+        <ListView.itemTemplate>
+            <StackLayout class="p-10" orientation="horizontal">
+                <StackLayout backgroundColor="#A7A9AC" class="container">
+                <Label text="{{ date }}" class="header" textWrap="true" horizontalAlignment="center"></Label>
+                </StackLayout>
+                    <FlexboxLayout flexDirection="column">
+                        <StackLayout orientation="horizontal">
+                            <Label text="Workout Type: " class="workout-item" textWrap="true"></Label>
+                            <Label text="{{ description }}" class="workout-item" textWrap="true"></Label>
+                        </StackLayout>
+                        <StackLayout orientation="horizontal">
+                            <Label text="Duration: " class="workout-item" textWrap="true"></Label>
+                            <Label text="{{ sessionLength }}" class="workout-item" textWrap="true"></Label>
+                        </StackLayout>
+                    </FlexboxLayout>
+            </StackLayout>
+        </ListView.itemTemplate>
+    </ListView>
+</Page>
